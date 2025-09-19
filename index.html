@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ORDER_IT — Home</title>
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">ORDER_IT</div>
+        <div class="tagline">Fresh • Fast • Local</div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="offers.html">Offers</a>
+        <a href="order.html">Menu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn ghost" href="order.html">🛒 Cart (<span id="cartCountHome">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>Delicious food delivered — fast & fresh</h1>
+        <p class="lead">Local favorites, chef specials and quick delivery. Order from ORDER_IT and enjoy exclusive offers today.</p>
+
+        <div class="meta-row">
+          <div><strong>Timings:</strong> 10:00 AM — 10:00 PM</div>
+          <div><strong>Location:</strong> 123 Food Street, YourCity</div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="order.html">Order Now</a>
+          <a class="btn ghost" href="offers.html">See Offers</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="promo-card">
+          <div class="badge">20% OFF</div>
+          <h3>Welcome Offer</h3>
+          <p>Use code <strong>WELCOME20</strong> on the Offers page and enjoy 20% off your first order.</p>
+          <img src="images/combo_offer.jpeg" alt="Delicious food">
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED DISHES (Updated like Menu Page) -->
+    <section class="section container">
+      <h2 class="section-title">Featured Dishes</h2>
+      <div class="menu-grid" id="featuredPreview">
+        
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section container">
+      <h2 class="section-title">Why ORDER_IT?</h2>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <h3>Fast Delivery</h3>
+          <p>Delivered in 30–45 minutes in most areas.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Fresh & Local</h3>
+          <p>Ingredients sourced locally and cooked fresh.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Secure Payments</h3>
+          <p>Multiple secure payment options supported.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2 class="section-title">Contact & Location</h2>
+      <div class="contact-grid">
+        <div><h4>Visit</h4><p>123 Food Street, YourCity</p></div>
+        <div><h4>Timings</h4><p>10:00 AM — 10:00 PM</p></div>
+        <div><h4>Phone</h4><p>+91 98765 43210</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="yearHome"></span> ORDER_IT — Built with ❤️</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

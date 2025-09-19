@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ORDER_IT — Offers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">ORDER_IT</div>
+        <div class="tagline">Fresh • Fast • Local</div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="offers.html">Offers</a>
+        <a href="order.html">Menu</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn ghost" href="order.html">🛒 Cart (<span id="cartCountOffers">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h1 class="section-title">Hot Offers & Combos</h1>
+      <p class="lead">Save more with combos and limited-time discounts. Click Apply to enable promo and view the menu.</p>
+
+      <div class="offers-grid big">
+        <div class="offer-card large">
+          <img src="images/welcome.jpeg"alt="Welcome Offer">
+          <div class="offer-body">
+            <div class="offer-badge">20% OFF</div>
+            <h3>Welcome Offer</h3>
+            <p>Flat 20% off on first order. Code: <strong>WELCOME20</strong></p>
+            <div class="offer-actions">
+              <button class="btn primary" data-apply-promo="WELCOME20">Apply & View Menu</button>
+              <button class="btn ghost" onclick="window.location='order.html'">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer-card medium">
+          <img src="images/combo_offer.jpeg" alt="Combo">
+          <div class="offer-body">
+            <div class="offer-badge small">COMBO</div>
+            <h3>Meal Combos</h3>
+            <p>Main + beverage combo — save ₹50.</p>
+            <div class="offer-actions">
+              <button class="btn primary" data-apply-promo="COMBO50">Apply & View Menu</button>
+              <button class="btn ghost" onclick="window.location='order.html'">Order</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer-card small">
+          <img src="images/desert_free.jpeg" alt="Dessert">
+          <div class="offer-body">
+            <div class="offer-badge small">FREE</div>
+            <h3>Free Dessert</h3>
+            <p>Free dessert on orders above ₹499.</p>
+            <div class="offer-actions">
+              <button class="btn primary" data-apply-promo="FREEDESSERT">Apply & View Menu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="yearOffers"></span> ORDER_IT — Built with ❤️</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

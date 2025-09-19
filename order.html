@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ORDER_IT — Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">ORDER_IT</div>
+        <div class="tagline">Fresh • Fast • Local</div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="offers.html">Offers</a>
+        <a href="order.html">Menu</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="cartTogglePage" class="btn icon-btn">🛒 <span id="cartCountPage">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="controls">
+          <input id="searchInput" type="search" placeholder="Search dishes, e.g. biryani, burger..." />
+          <select id="categorySelect">
+            <option value="all">All Categories</option>
+            <option value="starters">Starters</option>
+            <option value="mains">Mains</option>
+            <option value="desserts">Desserts</option>
+            <option value="beverages">Beverages</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="menuGrid" class="menu-grid"></div>
+    </section>
+  </main>
+
+  <!-- Cart Sidebar -->
+  <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCart" class="btn icon-btn">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-summary">
+      <div class="summary-row">
+        <span>Subtotal</span><strong>₹ <span id="cartSubtotal">0.00</span></strong>
+      </div>
+      <div class="summary-row">
+        <span>Discount</span><strong>− ₹ <span id="cartDiscount">0.00</span></strong>
+      </div>
+      <div class="summary-row">
+        <span>Delivery</span><strong>₹ <span id="cartDelivery">0.00</span></strong>
+      </div>
+      <div class="summary-row">
+        <span>Tax (5%)</span><strong>₹ <span id="cartTax">0.00</span></strong>
+      </div>
+      <div class="summary-row final">
+        <span>Total</span><strong>₹ <span id="cartTotal">0.00</span></strong>
+      </div>
+
+      <div class="summary-actions">
+        <button id="checkoutBtn" class="btn primary full">Checkout</button>
+        <button id="clearCartBtn" class="btn ghost full">Clear Cart</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal (now asks for name + phone + address) -->
+  <div id="checkoutModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button id="closeCheckoutModal" class="btn icon-btn close-modal">✕</button>
+      <h3>Delivery Details</h3>
+      <p class="muted">Tell us where to deliver — we only need name, phone & address.</p>
+
+      <label for="nameInput">Full name</label>
+      <input id="nameInput" type="text" placeholder="e.g. Rahul Sharma" />
+
+      <label for="phoneInput">Phone number</label>
+      <input id="phoneInput" type="tel" placeholder="+91 9xxxxxxxxx" />
+
+      <label for="addressInput">Delivery address</label>
+      <textarea id="addressInput" rows="3" placeholder="House no, Street, Locality, City, PIN"></textarea>
+
+      <div class="modal-actions">
+        <button id="placeOrderBtn" class="btn primary">Confirm Order</button>
+        <button id="cancelCheckoutBtn" class="btn ghost">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm Modal -->
+  <div id="confirmModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <h3>Order Confirmed 🎉</h3>
+      <p>Your Order ID:</p>
+      <div class="order-id" id="orderIdDisplay">—</div>
+      <div id="orderDetailsDisplay"></div>
+      <div class="modal-actions"><button id="closeConfirmBtn" class="btn primary">Done</button></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="yearPage"></span> ORDER_IT</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
